@@ -35,4 +35,4 @@ z = seq(1, 3, length = 20)
 eval(dg_dz)
 ```
 
-#### End of the morning session!
+#### End of the morning session! 
