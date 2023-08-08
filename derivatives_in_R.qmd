@@ -24,7 +24,7 @@ dg_dz <- D(gz, "z")
 dg_dz
 
 z = 3.6
-
+ 
 eval(dg_dz)
 
 ```
