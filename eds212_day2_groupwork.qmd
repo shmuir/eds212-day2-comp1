@@ -1,0 +1,52 @@
+---
+title: "day 2 group tasks"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+library(viridis)
+```
+
+### Question 1 
+```{r}
+fx = expression(x^2)
+df_dx <- D(fx, "x")
+x = 3
+
+eval(df_dx)
+```
+
+### Question 2
+```{r}
+pa = expression(2 * ((3 * a + 2)^4) - 5)
+df_pa <- D(pa, "a")
+a = 1.2
+
+eval(df_pa)
+```
+
+### Plot 1
+```{r}
+ggplot(penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
+  geom_point() +
+  labs(x = "Bill Length (mm)",
+       y = "Bill Depth (mm)",
+       title = "Palmer Penguins Bill Sizes",
+       color = "Species") +
+  theme_linedraw() +
+  scale_color_viridis_d(begin = 0.1, end = 0.6)
+```
+
+### Plot 2
+```{r}
+ggplot(penguins, aes(species, flipper_length_mm)) +
+  geom_jitter() +
+  labs(x = "Species",
+       y = "Flipper Length (mm)",
+       title = "Palmer Penguins Flipper Length by Species") +
+  theme_linedraw()
+```
+
